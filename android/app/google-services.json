@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "705561235993",
+    "project_id": "meal-monkey-acf75",
+    "storage_bucket": "meal-monkey-acf75.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:705561235993:android:ccd61d84164280a78d9088",
+        "android_client_info": {
+          "package_name": "com.abuzead.meal_monkey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "705561235993-keda53t8ilrso43mg5gfaio0hd6s6v33.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.abuzead.meal_monkey",
+            "certificate_hash": "34a0d2f80322f6b2109c8a26eb9ea3599f6f11c1"
+          }
+        },
+        {
+          "client_id": "705561235993-bgi6jd5ks6jh54tn9l5ndsdjh9849s2h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhwIerI6JvEn1hqiQxfkgJ8HPi2DbyJ-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "705561235993-bgi6jd5ks6jh54tn9l5ndsdjh9849s2h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
