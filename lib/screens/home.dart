@@ -18,6 +18,7 @@ class Home extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
+            CustomAppBar(title: 'Good Morning Akila!', greeting: true),
             Expanded(
               child: ListView(
                 children: [

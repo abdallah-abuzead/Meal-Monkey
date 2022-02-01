@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:meal_monkey/app_data.dart';
 import 'package:meal_monkey/components/custom_widgets.dart';
 import 'package:meal_monkey/components/rounded_button.dart';
+import 'package:meal_monkey/screens/login.dart';
+import 'package:meal_monkey/screens/sign_up.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -41,14 +43,14 @@ class Welcome extends StatelessWidget {
                     RoundedButton(
                       color: AppData.mainColor,
                       child: Text('Login', style: TextStyle(color: Colors.white, fontSize: 16)),
-                      onPressed: () {},
+                      onPressed: () => Get.toNamed(Login.id),
                     ),
                     SizedBox(height: 20),
                     RoundedButton(
                       color: Colors.white,
                       child: Text('Create an Account', style: TextStyle(color: AppData.mainColor, fontSize: 16)),
                       hasBorder: true,
-                      onPressed: () {},
+                      onPressed: () => Get.toNamed(SignUp.id),
                     ),
                   ],
                 ),

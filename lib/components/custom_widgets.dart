@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:meal_monkey/models/custom_user.dart';
+import 'package:meal_monkey/screens/welcome.dart';
 
 import '../app_data.dart';
 
@@ -21,7 +24,13 @@ Widget CustomAppBar({required String title, bool back = false, bool greeting = f
             ),
           ],
         ),
-        Icon(Icons.shopping_cart, color: AppData.primaryFontColor, size: 23),
+        InkWell(
+          child: Icon(Icons.shopping_cart, color: AppData.primaryFontColor, size: 23),
+          onTap: () async {
+            await CustomUser.signOut();
+            Get.offAllNamed(Welcome.id);
+          },
+        )
       ],
     ),
   );
