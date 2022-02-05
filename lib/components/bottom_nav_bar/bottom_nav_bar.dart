@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/app_data.dart';
-import 'package:meal_monkey/providers/bottom_nav_bar_provider.dart';
-import 'package:provider/provider.dart';
+
+import 'nav_bar_item.dart';
 
 class BottomNavBar extends StatelessWidget {
   BottomNavBar({Key? key}) : super(key: key);
@@ -41,32 +41,6 @@ class BottomNavBar extends StatelessWidget {
             Divider(color: AppData.primaryFontColor, thickness: 5, indent: 140, endIndent: 140),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class NavBarItem extends StatelessWidget {
-  NavBarItem({required this.icon, required this.label, required this.tabIndex});
-  final IconData icon;
-  final String label;
-  final int tabIndex;
-
-  @override
-  Widget build(BuildContext context) {
-    final bnbp = Provider.of<BottomNavBarProvider>(context);
-    bool isSelected = bnbp.currentTabIndex == tabIndex;
-
-    return MaterialButton(
-      onPressed: () => bnbp.currentTabIndex = tabIndex,
-      minWidth: 75,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(icon, size: 21, color: isSelected ? AppData.mainColor : AppData.placeholderColor),
-          SizedBox(height: 2),
-          Text(label, style: TextStyle(fontSize: 12, color: isSelected ? AppData.mainColor : AppData.placeholderColor)),
-        ],
       ),
     );
   }

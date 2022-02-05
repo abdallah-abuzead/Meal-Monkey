@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:meal_monkey/models/custom_user.dart';
-import 'package:meal_monkey/screens/welcome.dart';
+import 'package:meal_monkey/views/welcome.dart';
 
 import '../app_data.dart';
 
@@ -30,7 +30,7 @@ Widget CustomAppBar({required String title, bool back = false, bool greeting = f
             await CustomUser.signOut();
             Get.offAllNamed(Welcome.id);
           },
-        )
+        ),
       ],
     ),
   );

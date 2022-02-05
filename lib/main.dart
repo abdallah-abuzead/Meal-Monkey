@@ -2,18 +2,18 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:meal_monkey/app_data.dart';
-import 'package:meal_monkey/screens/app_services.dart';
-import 'package:meal_monkey/screens/common.dart';
-import 'package:meal_monkey/screens/home.dart';
-import 'package:meal_monkey/screens/login.dart';
-import 'package:meal_monkey/screens/new_password.dart';
-import 'package:meal_monkey/screens/reset_password.dart';
-import 'package:meal_monkey/screens/send_otp.dart';
-import 'package:meal_monkey/screens/sign_up.dart';
+import 'package:meal_monkey/views/app_services.dart';
+import 'package:meal_monkey/views/common.dart';
+import 'package:meal_monkey/views/home.dart';
+import 'package:meal_monkey/views/login.dart';
+import 'package:meal_monkey/views/new_password.dart';
+import 'package:meal_monkey/views/reset_password.dart';
+import 'package:meal_monkey/views/send_otp.dart';
+import 'package:meal_monkey/views/sign_up.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'models/custom_user.dart';
-import 'screens/welcome.dart';
+import 'views/welcome.dart';
 
 Future<bool> checkIfInstalled() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();

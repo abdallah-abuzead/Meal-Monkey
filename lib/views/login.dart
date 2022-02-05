@@ -6,9 +6,9 @@ import 'package:meal_monkey/components/custom_widgets.dart';
 import 'package:meal_monkey/components/rounded_button.dart';
 import 'package:meal_monkey/components/spinner.dart';
 import 'package:meal_monkey/constants.dart';
-import 'package:meal_monkey/screens/sign_up.dart';
 import 'package:meal_monkey/validation/validation_error.dart';
 import 'package:meal_monkey/validation/validator.dart';
+import 'package:meal_monkey/views/sign_up.dart';
 
 import 'home.dart';
 

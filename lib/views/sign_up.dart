@@ -6,10 +6,10 @@ import 'package:meal_monkey/components/custom_widgets.dart';
 import 'package:meal_monkey/components/rounded_button.dart';
 import 'package:meal_monkey/components/spinner.dart';
 import 'package:meal_monkey/models/custom_user.dart';
-import 'package:meal_monkey/screens/home.dart';
-import 'package:meal_monkey/screens/login.dart';
 import 'package:meal_monkey/validation/validation_error.dart';
 import 'package:meal_monkey/validation/validator.dart';
+import 'package:meal_monkey/views/home.dart';
+import 'package:meal_monkey/views/login.dart';
 
 import '../constants.dart';
 

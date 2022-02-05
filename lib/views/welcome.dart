@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:meal_monkey/app_data.dart';
 import 'package:meal_monkey/components/custom_widgets.dart';
 import 'package:meal_monkey/components/rounded_button.dart';
-import 'package:meal_monkey/screens/login.dart';
-import 'package:meal_monkey/screens/sign_up.dart';
+import 'package:meal_monkey/views/login.dart';
+import 'package:meal_monkey/views/sign_up.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
