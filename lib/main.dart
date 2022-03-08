@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:meal_monkey/app_data.dart';
 import 'package:meal_monkey/views/app_services.dart';
 import 'package:meal_monkey/views/common.dart';
@@ -10,24 +11,23 @@ import 'package:meal_monkey/views/new_password.dart';
 import 'package:meal_monkey/views/reset_password.dart';
 import 'package:meal_monkey/views/send_otp.dart';
 import 'package:meal_monkey/views/sign_up.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
+import 'firebase_options.dart';
 import 'models/custom_user.dart';
 import 'views/welcome.dart';
 
 Future<bool> checkIfInstalled() async {
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  bool isInstalled = prefs.getBool('installed') ?? false;
-  if (!isInstalled) await prefs.setBool('installed', true);
-  print(isInstalled);
+  GetStorage box = GetStorage();
+  bool isInstalled = box.read('installed') ?? false;
+  if (!isInstalled) box.write('installed', true);
   return isInstalled;
 }
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await GetStorage.init();
   bool isInstalled = await checkIfInstalled();
-  // CustomUser.signOut();
   bool isLogin = CustomUser.currentUser != null;
   runApp(MyApp(isInstalled: isInstalled, isLogin: isLogin));
 }
@@ -42,6 +42,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: AppData.appName,
+      // initialRoute: LoginScreen.id,
       initialRoute: isInstalled
           ? isLogin
               ? Common.id

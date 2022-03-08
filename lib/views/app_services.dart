@@ -1,7 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:meal_monkey/components/custom_widgets.dart';
 import 'package:meal_monkey/components/rounded_button.dart';
+import 'package:meal_monkey/views/welcome.dart';
+
 import '../app_data.dart';
 
 class AppServices extends StatefulWidget {
@@ -67,7 +70,7 @@ class _AppServicesState extends State<AppServices> {
                   RoundedButton(
                     color: AppData.mainColor,
                     child: Text('Next', style: TextStyle(color: Colors.white, fontSize: 16)),
-                    onPressed: () {},
+                    onPressed: () => Get.offNamed(Welcome.id),
                   ),
                 ],
               ),
